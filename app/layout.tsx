@@ -27,7 +27,12 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col bg-gray-950 text-gray-100">
+        <div className="flex flex-1 flex-col">{children}</div>
+        <footer className="border-t border-gray-800 bg-gray-950 px-6 py-3 text-center text-xs text-gray-500">
+          Google Ads Helper v{process.env.NEXT_PUBLIC_APP_VERSION}
+        </footer>
+      </body>
     </html>
   );
 }

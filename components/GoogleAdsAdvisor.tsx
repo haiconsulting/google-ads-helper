@@ -128,7 +128,7 @@ export default function GoogleAdsAdvisor() {
       if (err instanceof TypeError && err.message === "Failed to fetch") {
         setError(
           "Network error (browser: Failed to fetch / empty response). Usually the API route crashed or the connection was reset.\n\n" +
-            "Where to look: the terminal where you ran `npm run dev` (or `next dev --port 3002`). Search for lines starting with `[recommend]` and any stack trace below them."
+            "Where to look: the terminal where you ran `npm run dev` (127.0.0.1:7424). Search for lines starting with `[recommend]` and any stack trace below them."
         );
       } else {
         setError(err instanceof Error ? err.message : "Something went wrong.");
@@ -152,7 +152,7 @@ export default function GoogleAdsAdvisor() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-950 text-gray-100">
+    <div className="flex-1 bg-gray-950 text-gray-100">
       {/* Header */}
       <header className="border-b border-gray-800 bg-gray-900">
         <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">

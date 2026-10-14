@@ -1,0 +1,43 @@
+{
+  "$schema": "https://harness.hai/schemas/connector-manifest-1.json",
+  "id": "google-ads-helper",
+  "displayName": "Google Ads Helper",
+  "version": "0.1.0",
+  "specVersion": "1",
+  "language": "typescript",
+  "repo": "haiconsulting/google-ads-helper",
+  "endpoint": "http://127.0.0.1:7424/api/mcp",
+  "health": "/api/mcp/healthz",
+  "port": 7424,
+  "scopes": [
+    {
+      "id": "gads:clients.read",
+      "access": "read",
+      "description": "Read configured Google Ads Helper brand profiles."
+    },
+    {
+      "id": "gads:hosting.read",
+      "access": "read",
+      "description": "Read hosting deployment, analytics, speed, log, and error summaries."
+    }
+  ],
+  "tools": [
+    { "name": "gads.clients.list", "access": "read", "scopes": ["gads:clients.read"] },
+    { "name": "gads.clients.get", "access": "read", "scopes": ["gads:clients.read"] },
+    { "name": "gads.hosting.deployments.list", "access": "read", "scopes": ["gads:hosting.read"] },
+    { "name": "gads.hosting.deployments.get", "access": "read", "scopes": ["gads:hosting.read"] },
+    { "name": "gads.hosting.analytics.summary", "access": "read", "scopes": ["gads:hosting.read"] },
+    { "name": "gads.hosting.speed.summary", "access": "read", "scopes": ["gads:hosting.read"] },
+    { "name": "gads.hosting.logs.query", "access": "read", "scopes": ["gads:hosting.read"] },
+    { "name": "gads.hosting.errors.list", "access": "read", "scopes": ["gads:hosting.read"] },
+    { "name": "gads.hosting.status", "access": "read", "scopes": ["gads:hosting.read"] }
+  ],
+  "secrets": ["AUDIT_HMAC_KEY"],
+  "accounts": [
+    { "provider": "vercel", "binding": "shared", "required": true }
+  ],
+  "dataClasses": ["public", "internal", "analytics", "logs"],
+  "tenancy": { "mode": "single", "tenantId": "hai" },
+  "hosting": { "provider": "vercel", "projectId": "unknown", "teamId": "unknown" },
+  "owner": "Google Ads Helper MCP (AO)"
+}

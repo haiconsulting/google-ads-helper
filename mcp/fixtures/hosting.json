@@ -1,0 +1,80 @@
+{
+  "gads.hosting.deployments.list": {
+    "deployments": [
+      {
+        "id": "dpl_fixture",
+        "url": "https://google-ads-helper.example",
+        "target": "preview",
+        "state": "READY",
+        "gitSha": "0123456789abcdef",
+        "gitRef": "harness/mcp-v0",
+        "version": "0.2.0",
+        "createdAt": "2026-10-14T00:00:00.000Z",
+        "readyAt": "2026-10-14T00:03:00.000Z"
+      }
+    ]
+  },
+  "gads.hosting.deployments.get": {
+    "id": "dpl_fixture",
+    "url": "https://google-ads-helper.example",
+    "target": "preview",
+    "state": "READY",
+    "gitSha": "0123456789abcdef",
+    "gitRef": "harness/mcp-v0",
+    "version": "0.2.0",
+    "createdAt": "2026-10-14T00:00:00.000Z",
+    "readyAt": "2026-10-14T00:03:00.000Z",
+    "buildDurationMs": 120000,
+    "errorMessage": { "_untrusted": true, "text": "[redacted]" }
+  },
+  "gads.hosting.analytics.summary": {
+    "pageviews": 10,
+    "visitors": 4,
+    "bounceRate": 0.25,
+    "series": [{ "t": "2026-10-14T00:00:00.000Z", "pageviews": 10, "visitors": 4 }],
+    "topPages": [{ "path": "/", "pageviews": 10 }],
+    "topReferrers": [{ "ref": "https://example.com", "visitors": 2 }]
+  },
+  "gads.hosting.speed.summary": {
+    "score": 90,
+    "p75": { "LCP": 2.1, "INP": 100, "CLS": 0.01, "FCP": 1.2, "TTFB": 0.4 },
+    "byRoute": [{ "route": "/", "LCP": 2.1, "INP": 100, "CLS": 0.01 }]
+  },
+  "gads.hosting.logs.query": {
+    "entries": [
+      {
+        "ts": "2026-10-14T00:00:00.000Z",
+        "level": "info",
+        "source": "lambda",
+        "path": "/api/mcp/healthz",
+        "status": 200,
+        "message": { "_untrusted": true, "text": "[redacted]" }
+      }
+    ]
+  },
+  "gads.hosting.errors.list": {
+    "errors": [
+      {
+        "fingerprint": "fixture",
+        "message": { "_untrusted": true, "text": "[redacted]" },
+        "count": 1,
+        "firstSeen": "2026-10-14T00:00:00.000Z",
+        "lastSeen": "2026-10-14T01:00:00.000Z",
+        "route": "/api/recommend",
+        "deploymentId": "dpl_fixture"
+      }
+    ]
+  },
+  "gads.hosting.status": {
+    "provider": "vercel",
+    "projectId": "unknown",
+    "productionUrl": "https://google-ads-helper.example",
+    "currentVersion": "0.2.0",
+    "lastDeploy": {
+      "id": "dpl_fixture",
+      "state": "READY",
+      "createdAt": "2026-10-14T00:00:00.000Z"
+    },
+    "health": "ok"
+  }
+}
