@@ -1,0 +1,11 @@
+{
+  "name": "@hai/mcp-google-ads-helper",
+  "version": "0.1.0",
+  "private": true,
+  "description": "HAI harness MCP connector for Google Ads Helper",
+  "scripts": {
+    "build": "tsc -p ../tsconfig.json --noEmit --pretty false",
+    "test": "npm --prefix .. test",
+    "conformance": "npm --prefix .. run conformance"
+  }
+}

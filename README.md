@@ -2,6 +2,8 @@
 
 Agency-facing **Google Ads Advisor** UI: pick a client, describe the new direction, optionally paste campaign data and/or upload Google Ads screenshots; recommendations stream from Claude via `/api/recommend`.
 
+The harness MCP connector lives in `mcp/` and is served at `POST /api/mcp`. See `mcp/README.md`. It is read-only and does not use the advisor model key.
+
 ## Getting Started
 
 Create `.env.local` in the project root:

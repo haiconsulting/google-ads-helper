@@ -152,7 +152,7 @@ export default function GoogleAdsAdvisor() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-950 text-gray-100">
+    <div className="flex-1 bg-gray-950 text-gray-100">
       {/* Header */}
       <header className="border-b border-gray-800 bg-gray-900">
         <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
