@@ -4,6 +4,7 @@
   "private": true,
   "description": "HAI harness MCP connector for Google Ads Helper",
   "scripts": {
+    "dev": "npm --prefix .. run dev",
     "build": "tsc -p ../tsconfig.json --noEmit --pretty false",
     "test": "npm --prefix .. test",
     "conformance": "npm --prefix .. run conformance"

@@ -128,7 +128,7 @@ export default function GoogleAdsAdvisor() {
       if (err instanceof TypeError && err.message === "Failed to fetch") {
         setError(
           "Network error (browser: Failed to fetch / empty response). Usually the API route crashed or the connection was reset.\n\n" +
-            "Where to look: the terminal where you ran `npm run dev` (or `next dev --port 3002`). Search for lines starting with `[recommend]` and any stack trace below them."
+            "Where to look: the terminal where you ran `npm run dev` (127.0.0.1:7424). Search for lines starting with `[recommend]` and any stack trace below them."
         );
       } else {
         setError(err instanceof Error ? err.message : "Something went wrong.");

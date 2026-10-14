@@ -114,6 +114,7 @@ test("1 manifest validates", () => {
     tenancy: { mode: string; tenantId: string };
     endpoint: string;
     health: string;
+    port: number;
   };
   const pkg = JSON.parse(readFileSync(join(ROOT, "mcp/package.json"), "utf8")) as { version: string; name: string };
   assert.equal(manifest.id, "google-ads-helper");
@@ -122,7 +123,8 @@ test("1 manifest validates", () => {
   assert.equal(manifest.version, connectorVersion);
   assert.equal(manifest.specVersion, "1");
   assert.equal(manifest.language, "typescript");
-  assert.equal(manifest.endpoint, "/api/mcp");
+  assert.equal(manifest.endpoint, "http://127.0.0.1:7424/api/mcp");
+  assert.equal(manifest.port, 7424);
   assert.equal(manifest.health, "/api/mcp/healthz");
   assert.equal(manifest.tenancy.mode, "single");
   assert.equal(manifest.tenancy.tenantId, "hai");

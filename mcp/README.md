@@ -1,6 +1,15 @@
 # Google Ads Helper MCP connector
 
-Streamable HTTP MCP for this app, at `POST /api/mcp`. The harness is the only client. Spec: connector interface 0.3.0.
+Streamable HTTP MCP for connector id `google-ads-helper`, at `POST /api/mcp`. The harness is the only client. Spec: connector interface 0.3.1.
+
+## Local development
+
+`npm run dev` binds **127.0.0.1:7424** only (Harness Architect port for this connector). It does not listen on `0.0.0.0`.
+
+- MCP: `http://127.0.0.1:7424/api/mcp`
+- Health: `http://127.0.0.1:7424/api/mcp/healthz`
+
+The same command is `npm run dev` inside `mcp/`. The manifest `port` is `7424` and `endpoint` is `http://127.0.0.1:7424/api/mcp`.
 
 ## Auth
 

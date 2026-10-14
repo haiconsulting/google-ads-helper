@@ -2,7 +2,7 @@
 
 Agency-facing **Google Ads Advisor** UI: pick a client, describe the new direction, optionally paste campaign data and/or upload Google Ads screenshots; recommendations stream from Claude via `/api/recommend`.
 
-The harness MCP connector lives in `mcp/` and is served at `POST /api/mcp`. See `mcp/README.md`. It is read-only and does not use the advisor model key.
+The harness MCP connector id is `google-ads-helper`. It lives in `mcp/` and is served at `POST /api/mcp`. See `mcp/README.md`. It is read-only and does not use the advisor model key.
 
 ## Getting Started
 
@@ -12,13 +12,13 @@ Create `.env.local` in the project root:
 ANTHROPIC_API_KEY=sk-ant-api03-...
 ```
 
-Run the dev server:
+Run the dev server. It listens on loopback port **7424** only:
 
 ```bash
 npm run dev
 ```
 
-Open the URL shown in the terminal (often [http://localhost:3000](http://localhost:3000); use your port if you pass `--port`, e.g. `3002`).
+Open [http://127.0.0.1:7424](http://127.0.0.1:7424). The local MCP endpoint is [http://127.0.0.1:7424/api/mcp](http://127.0.0.1:7424/api/mcp).
 
 ## Troubleshooting
 

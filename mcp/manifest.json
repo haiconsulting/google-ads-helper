@@ -6,8 +6,9 @@
   "specVersion": "1",
   "language": "typescript",
   "repo": "haiconsulting/google-ads-helper",
-  "endpoint": "/api/mcp",
+  "endpoint": "http://127.0.0.1:7424/api/mcp",
   "health": "/api/mcp/healthz",
+  "port": 7424,
   "scopes": [
     {
       "id": "gads:clients.read",
